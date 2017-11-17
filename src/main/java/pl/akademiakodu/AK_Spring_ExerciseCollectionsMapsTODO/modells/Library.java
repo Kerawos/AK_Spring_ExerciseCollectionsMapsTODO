@@ -23,30 +23,13 @@ public class Library {
     Writer enzo = new Writer("Enzo",  Arrays.asList(mount));
 
     public List<Writer> getWriters(String articleName){
-        List<Writer> writers = createWriterList();
-        List<Writer> resultList = new ArrayList<>();
-        for (int i = 0; i < writers.size(); i++) {
-            for (int j = 0; j < writers.get(i).getArticles().size(); j++) {
-                if (articleName.equals(writers.get(i).getArticles().get(j).getName())){
-                    resultList.add(writers.get(i));
-                    break;
-                }
-            }
-        }
-        return resultList;
+        //todo return all writer that participate with article writing comes in argument here
+        return null;
     }
 
     public List<Article> getArticles(String writerName){
-        List<Article> articleList = new ArrayList<>();
-        List<Writer> writers = new ArrayList<>();
-        writers = createWriterList();
-        for (Writer writer : writers) {
-            if (writerName.equals(writer.getName())){
-                articleList = writer.getArticles();
-                break;
-            }
-        }
-        return articleList;
+        //todo return all articles wrote by writer name comes as argument here
+        return null;
     }
 
     public List<Article>createArticleList(){
@@ -74,22 +57,12 @@ public class Library {
     }
 
     public boolean isWriter(String userInput){
-        List<Writer> writers = createWriterList();
-        for (Writer writer : writers) {
-           if (writer.getName().equals(userInput)){
-               return true;
-           }
-        }
+        //todo check is user input is writer name, in that case return true
         return false;
     }
 
     public boolean isArticle(String userInput){
-        List<Article> articles = createArticleList();
-        for (Article articl : articles) {
-            if (articl.getName().equals(userInput)){
-                return true;
-            }
-        }
+        //todo check is user iput is article name, in that case return true
         return false;
     }
 

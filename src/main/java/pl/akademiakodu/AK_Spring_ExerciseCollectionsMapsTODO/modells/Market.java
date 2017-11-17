@@ -15,17 +15,7 @@ public class Market {
     }
 
     public void addItem(Item item, int qty){
-        boolean isContain = false;
-        for (Map.Entry<Enum, Integer> element : shopList.entrySet()){
-            if (element.getKey()==item){
-                element.setValue(element.getValue()+qty);
-                isContain = true;
-                break;
-            }
-        }
-        if (!isContain){
-            shopList.put(item, qty);
-        }
+        // todo
     }
 
     public String showCurrentList(){
@@ -37,11 +27,8 @@ public class Market {
     }
 
     public int calculatePrice(){
-        int sum = 0;
-        for(Map.Entry<Enum, Integer> element : shopList.entrySet()){
-            sum+=element.getValue() * element.getKey().toString().length();
-        }
-        return sum;
+        //todo
+        return 0;
     }
 
     public int parseInt(String s){
