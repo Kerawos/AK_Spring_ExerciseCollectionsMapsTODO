@@ -21,10 +21,12 @@ public class MarketController {
     }
 
     @PostMapping("/mar") public String marketPost(@ModelAttribute UserInput2 userInput2, Model model){
-        model.addAttribute("availableList", market.showAllItems());
-        market.addItem(market.parseEnum(userInput2.getInputKey()), market.parseInt(userInput2.getInputValue()));
+        if (!userInput2.getInputKey().equals("") && !userInput2.getInputValue().equals("")){
+            market.addItem(market.parseEnum(userInput2.getInputKey()), market.parseInt(userInput2.getInputValue()));
+        }
         model.addAttribute("shopList", market.showCurrentList());
         model.addAttribute("totalCost", market.calculatePrice());
+        model.addAttribute("availableList", market.showAllItems());
         return "market";
     }
 }
