@@ -1,9 +1,18 @@
 package pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells;
 
+/**
+ * Class for storing user inputs object
+ */
 public class UserInput2 {
+    /**
+     * Variables declaration
+     */
     private String inputKey;
     private String inputValue;
 
+    /**
+     * Getters and setters section
+     */
     public String getInputKey() {
         return inputKey;
     }
