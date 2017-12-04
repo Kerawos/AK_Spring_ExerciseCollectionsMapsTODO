@@ -10,22 +10,26 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
+/**
+ * Responsible for testing service
+ */
 public class MarketTest {
 
     private static Market market;
 
-    @BeforeClass
-    public static void start() {
+    @BeforeClass public static void start() {
         market = new Market();
     }
 
-    @AfterClass
-    public static void stop() throws Exception {
+    @AfterClass public static void stop() throws Exception {
         market = null;
     }
 
-    @Test
-    public void test() throws Exception {
+    /**
+     * Method responsible for testing market logic
+     * @throws Exception
+     */
+    @Test public void testMarket() throws Exception {
         HashMap<Enum, Integer> actual = new HashMap<>();
         actual.put(Market.Item.APPLE, 5);
         actual.put(Market.Item.TOMATO, 3);
@@ -44,6 +48,9 @@ public class MarketTest {
         comparatorHashMap(actual, Market.shopList);
     }
 
+    /**
+     * Method responsible for testing market logic in case of user input error
+     */
     @Test public void testExc(){
         String test = "Onion 54";
         try {
@@ -61,6 +68,11 @@ public class MarketTest {
         }
     }
 
+    /**
+     * Method responsible for compare thwo hashmaps each other
+     * @param actual
+     * @param expected
+     */
     private void comparatorHashMap(HashMap<Enum, Integer> actual, HashMap<Enum, Integer> expected){
         int c1 = 0;
         for (Map.Entry<Enum, Integer> elementActual : actual.entrySet()){
