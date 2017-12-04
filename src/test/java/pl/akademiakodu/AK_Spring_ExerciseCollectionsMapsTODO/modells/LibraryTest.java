@@ -1,5 +1,8 @@
 package pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells;
 
+/**
+ * Imports section
+ */
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -11,22 +14,26 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Responsible for testing service
+ */
 public class LibraryTest {
 
     private static Library library;
 
-    @BeforeClass
-    public static void start() {
+    @BeforeClass public static void start() {
         library = new Library();
     }
 
-    @AfterClass
-    public static void stop() throws Exception {
+    @AfterClass public static void stop() throws Exception {
         library = null;
     }
 
-    @Test
-    public void test() throws Exception {
+    /**
+     * Method responsible for testing library logic
+     * @throws Exception in case of wrong user inputs
+     */
+    @Test public void testLibrary() throws Exception {
         assertNotNull(library.createArticleList());
         assertNotNull(library.createWriterList());
 
@@ -59,6 +66,9 @@ public class LibraryTest {
         testArray(actual, expected);
     }
 
+    /**
+     * Method responsible checking equality of array
+     */
     private void testArray(List<Writer> actualList, List<Writer> expectedList) {
         assertEquals(actualList.size(), expectedList.size());
         for (int i = 0; i < actualList.size(); i++) {
