@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
 
     /**
-     * Method get description as a template
-     * @return template with description
+     * Method get index as a template
+     * @return template with index
      */
     @GetMapping("/") public String indexGet(){
         return "index";

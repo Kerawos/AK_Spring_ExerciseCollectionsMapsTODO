@@ -1,9 +1,12 @@
 package pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Service
 public class Library {
 
     Article pirates = new Article("Pirates", 3000);
