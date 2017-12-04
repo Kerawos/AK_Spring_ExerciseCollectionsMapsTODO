@@ -17,6 +17,7 @@ import pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells.entities.Us
  */
 @Controller
 public class LibraryController {
+
     /**
      * Service declaration
      */
@@ -25,7 +26,7 @@ public class LibraryController {
     /**
      * Method get template with exercise
      * @param model stored writers and articles
-     * @returntemplate with exercise to fill
+     * @return template with exercise to fill
      */
     @GetMapping("/lib") public String getLib(Model model){
         model.addAttribute("writers", library.showWriters());
