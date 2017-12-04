@@ -9,8 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells.Market;
-import pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells.entities.UserInput2;
+import pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells.services.Market;
+import pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells.UserInput2;
 
 /**
  * Responsible for get proper template after request

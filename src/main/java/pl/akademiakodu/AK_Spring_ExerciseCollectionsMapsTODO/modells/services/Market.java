@@ -1,4 +1,4 @@
-package pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells;
+package pl.akademiakodu.AK_Spring_ExerciseCollectionsMapsTODO.modells.services;
 
 import org.springframework.stereotype.Service;
 
